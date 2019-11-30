@@ -1,0 +1,413 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from www.guidetypo3.com/en/news/article/typo3-newsletter.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Nov 2019 12:50:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2012 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.org/
+-->
+
+<base  />
+
+
+<meta name="generator" content="TYPO3 4.5 CMS" />
+<meta name="keywords" content="typo3,newsletter typo3,guidetypo3,guide typo3" />
+
+<link rel="stylesheet" type="text/css" href="../../../typo3temp/stylesheet_7365c95366.css" media="all" />
+
+
+
+<script src="../../../typo3temp/javascript_93077bb238.js" type="text/javascript"></script>
+
+
+<title>TYPO3 Newsletter&nbsp;- Guide TYPO3</title><meta name="google-site-verification" content="P5N2kwd9qFWmwwCZr22GfvdUvUE7DflBQcVVl9GGKac" /><meta name="copyright" content="guidetypo3 2010 - Tous droits réservés" /><meta http-equiv="content-language" content="fr-FR" />	
+	<script type="text/javascript" src="../../../fileadmin/templates/v1/js/jquery-1.4.1.js"></script>
+	<link rel="stylesheet" href="../../../fileadmin/templates/v1/css/style-v11.css" type="text/css" media="all" />
+        <link rel="shortcut icon" href="../../../fileadmin/templates/v1/images/favicon.ico" />
+        <!-- begin accordion -->
+        <!-- begin dragtoshare -->
+	<link rel="stylesheet" type="text/css" href="../../../fileadmin/templates/flexibles_contents/dragtoshare/dragToShare-v1.css" />
+	<script src="../../../fileadmin/templates/flexibles_contents/dragtoshare/dragToShare14.js" type="text/javascript"></script>
+	<!-- end dragtoshare -->
+	<script src="../../../fileadmin/templates/v1/js/jquery-ui.js" type="text/javascript"></script>
+	<script src="../../../fileadmin/templates/v1/js/scrolltopcontrol.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#recap').accordion();
+		});
+	</script>
+	<!-- end accordion -->
+        <!-- begin display -->
+	<script type="text/javascript">
+		$(function(){
+			$('#news').hover(
+			// on hover
+			function(){
+				$(".filter").animate({ 
+					opacity: 1
+				}, 500 );
+			},
+			// on quit
+			function(){
+				$(".filter").animate({ 
+					opacity: 0
+				}, 500 );
+			});
+		});
+		$(function(){
+			$('.filter li a').click(function(){
+				// Figure out current list via CSS class
+				var curList = $(".filter li a.active").attr("rel");
+				
+				// List moving to
+				var $newList = $(this);
+				
+				// Remove highlighting - Add to just-clicked tab
+				$(".filter li a").removeClass("active");
+				$newList.addClass("active");
+				
+				$("#list_news").animate({ 
+					opacity: 0
+				}, 500, function() {
+					$("#list_news").removeClass();
+					$("#list_news").addClass("entryblock_"+$newList.attr("id"));
+				});
+				$("#list_news").animate({ 
+					opacity: 1
+				}, 500 );
+			});
+		});
+		
+		/* attempt to find a text selection */
+		function getSelected() {
+			if(window.getSelection) { return window.getSelection(); }
+			else if(document.getSelection) { return document.getSelection(); }
+			else {
+				var selection = document.selection && document.selection.createRange();
+				if(selection.text) { return selection.text; }
+				return false;
+			}
+			return false;
+		}
+		/* create sniffer */
+		$(document).ready(function() {
+			var url = '../../../recherche/mots-cles/%7bterm%7d/index.html', selectionImage;
+			$('.container').mouseup(function(e) {
+				var selection = getSelected();
+				if(selection && (selection = new String(selection).replace(/^\s+|\s+$/g,''))) {
+					//ajax here { http://davidwalsh.name/text-selection-ajax }
+					if(!selectionImage) {
+						selectionImage = $('<a>').attr({
+							href: url, 
+							title: 'Cliquez ici pour rechercher ce terme',
+							target: '_blank',
+							id: 'selection-image'
+						}).hide();
+						$(document.body).append(selectionImage);
+					}
+					selectionImage.attr('href',url.replace('{term}',encodeURI(selection))).css({
+						top: e.pageY - 30,	//offsets
+						left: e.pageX - 13 //offsets
+					}).fadeIn();
+				}
+			});
+			$(document.body).mousedown(function() {
+				if(selectionImage) { selectionImage.fadeOut(); }
+			});
+			
+			jQuery.fn.nudge=function(a){
+				a=jQuery.extend({amount:20,duration:300,property:"padding",direction:"left",toCallback:function(){},fromCallback:function(){}},a);
+				this.each(function(){
+					var h=jQuery(this);
+					var e=a;
+					var d=e.direction;
+					var g=e.property+d.substring(0,1).toUpperCase()+d.substring(1,d.length);
+					var c=h.css(g);
+					var f={};
+					f[g]=parseInt(e.amount)+parseInt(c);
+					var b={};b[g]=c;h.hover(function(){h.stop().animate(f,e.duration,"",e.toCallback)},function(){h.stop().animate(b,e.duration,"",e.fromCallback)})
+				});
+				return this
+			};
+
+		});
+
+	</script>
+	<!-- end display -->
+	<style type="text/css">
+	.titre-actu {background-position:left center;background-repeat:no-repeat;padding-left:36px;}
+	span.flecheLeft {float:left;}
+	span.flecheRight, .bt-submit {float:right;}
+	span.flecheLeft a {background:url("../../../fileadmin/templates/v1/images/nav-bg-left.png") no-repeat scroll 8px center #F6F6F6;padding:5px 10px 5px 25px;}
+	span.flecheRight a {background:url("../../../fileadmin/templates/v1/images/nav-bg-right.png") no-repeat scroll right center #F6F6F6;padding:5px 25px 5px 10px;}
+	span.flecheLeft a, span.flecheRight a, .bt-submit {-moz-border-radius:5px;border:1px solid #E5E5E5;display:block;color:#333333;}
+	span.flecheLeft a:hover, span.flecheRight a:hover, input.bt-submit:hover {border-color:#D3D3D3;}
+	
+	.guestbook {margin:10px;}
+	ul.commentInputs {overflow:hidden;}
+	ul.commentInputs li {float:left;margin-left:5px;width:220px;}
+	ul.commentInputs li label, .comments-field label {color:#6A6A6A;}
+	ul.commentInputs li input.mid, .comments-field  textarea {background:none repeat scroll 0 0 #F8F8F8;border:1px solid #E3E3E3;color:#6A6A6A;padding:4px;}
+	ul.commentInputs li input.mid {width:200px;}
+	.comments-field {padding:10px 10px 15px 5px;}
+	.bt-submit {padding:4px;}
+	
+	.error-bloc {background-position:5px 5px;border:1px solid #D25F66;
+background-repeat:no-repeat;color:#2E2D2D;margin:10px 10px 15px 5px;display:none;
+background-color: #FFBABA; -moz-border-radius-topleft: 18px; -moz-border-radius-topright: 18px; -moz-border-radius-bottomright: 18px; -moz-border-radius-bottomleft: 18px;
+background-image: url("../../../../1.bp.blogspot.com/_5rlxf3T9Z9U/SsIX7-C1GYI/AAAAAAAADco/5XubUJ34o2c/warning_32.png");}
+	.error-bloc p {font-weight:bold;padding-bottom:10px;padding-left:40px;padding-top:10px;}
+	.error-bloc ul {padding-bottom:5px;padding-left:40px;}
+	.error-bloc ul li {list-style:decimal outside none;}
+	
+	.no-comment {background:none repeat scroll 0 0 #F6F6F6;
+border:1px solid #E5E5E5;color:#6A6A6A;display:block;height:14px;
+line-height:14px;margin:15px 0 10px;padding:10px;text-align:center;
+-moz-border-radius:5px 5px 5px 5px;}
+
+	.align-center {text-align:center;}
+	.align-center img {-moz-box-shadow:0 0 8px #555555;margin:10px 0;}
+	
+	.noStyle {}
+	.noStyle .auteur {color:#999999;}
+	.noStyle ul {margin:5px 0 15px 30px;}
+	.noStyle ul li {list-style:disc outside none;margin:0 0 2px;color:#000000;}
+	
+	.noStyle h2 {color:#669933;font-family:Calibri,Arial,Helvetica,sans-serif;font-size:1.2em;padding-top:10px;}
+	.noStyle h3 {background-image:url("../../../fileadmin/templates/v1/images/bullet_triangle_2.gif");background-position:left 10px;background-repeat:no-repeat;padding-left:12px;color:#FF8700;font-family:Calibri,Arial,Helvetica,sans-serif;font-size:16px;padding-top:4px;}
+	
+	*::-moz-selection {
+		background-color:#FFFF00;
+		color:#000000;
+	}
+	
+	#selection-image {
+		background:transparent url(../../../../graphics8.nytimes.com/images/global/word_reference/ref_bubble.png) no-repeat scroll 0 0;
+		height:29px;
+		position:absolute;
+		width:25px;
+		z-index:2000;
+	}
+	
+	.bloc-page {height:70px;margin:5px;padding:10px;float:left;position:relative;width:305px;display:block;border:5px solid #DDDDDD;}
+	.bloc-page-news {border: 5px solid #DDDDDD;display: block;float: left;margin: 3px;padding: 8px;position: relative;width: 142px;}
+	.bloc-page img {float:left;padding-right:5px;}
+	.bloc-page-news img {padding-right:5px;}
+	.bloc-page h2 {padding-bottom:5px;font-size:18px;}
+	.bloc-page-news h2 {font-size:18px;padding-top: 0px;}
+	.bloc-page p {font-size:14px;}
+	.bloc-page-news p {font-size:14px;text-align: center;padding-top: 5px;}
+	.bloc-page:hover, .bloc-page-news:hover {border-color:#CCCCCC;}
+	
+	.left_container ul, .left_container li {color:#FF8700;padding:0;}
+	.left_container ul li a {color:#333333;}
+	.left_container ul li a:hover {color:#FF8700;}
+
+	.contact_form .contact_gauche .meta_contact img {position:relative;right:0;top:0;border:0 none;}
+	.menu-page {padding:10px 20px !important;}
+	
+	.csc-sitemap ul {margin:10px 10px 10px 20px !important;}
+	.csc-sitemap ul li {list-style:square outside none !important;margin:5px 0 !important;}
+	.csc-sitemap ul li ul {margin:0px 10px 0px 20px !important;}
+	
+	.menu-page {border:1px solid #D3D3D3;}
+	
+	#tx_codehighlight_pi1 {}
+	#tx_codehighlight_pi1 ol {-moz-border-radius:10px 10px 10px 10px;background-color:#EEEEEE;border:1px solid #D3D3D3;padding:10px;}
+	#tx_codehighlight_pi1 .code {}
+	#tx_codehighlight_pi1 .typoscript {}
+	#tx_codehighlight_pi1 .li2 {color:#000000;}
+	#tx_codehighlight_pi1 .li2 a {color:#000000;}
+	
+	.scrollContainer {}
+	.scrollContainer ul {}
+	.scrollContainer ul li {color:#000000;list-style:square outside none;margin-left:15px;padding:5px 0 5px 5px;}
+	
+	.tx-newsfeedit-pi1-form-row-datetime {display:none !important;}
+	.scrollButtons {display:none;}
+	
+	.news-list-browse {clear:both;display:block;text-align:center;}
+	.icon_file {background-image:url("../../../fileadmin/templates/v1/images/download.png");display: block;float: left;height: 16px;margin-right: 5px;position: relative;width: 16px;}
+	.down_file a {margin-right: 5px;}
+	.file_download {color: #669933;font-weight: bold;}
+	.hidelegende {padding-top:20px;}
+	.hidelegende legend {display:none;}
+
+	.tx-ttnews-browsebox td {margin-right: 2px;padding: 2px 5px;text-decoration: none;background-color:#999999;border: 1px solid #2C2C2C;}
+	.tx-ttnews-browsebox-SCell {background-color:#AAD83E !important;border: 1px solid #669933 !important;}
+	.tx-ttnews-browsebox td a {color: #FFFFFF;}
+	.tx-ttnews-browsebox {text-align: center;}
+	.tx-ttnews-browsebox table {display: inline;}
+	
+	.btnProposer {
+		background:url("../../../fileadmin/images/btn/btn-vide.png") no-repeat scroll 0 0 transparent;
+		clear:both;
+		color:#FFFFFF;
+		display:block;
+		font-size:16px;
+		font-weight:bold;
+		height:25px;
+		margin-bottom:5px;
+		margin-top:4px;
+		padding-left:30px;
+		padding-top:5px;
+		position:relative;
+		text-align:left;
+		width:150px;
+	}
+	
+	.lof-slidecontent {margin-bottom: 5px;}
+	.lof-main-item-desc, .lof-main-item-desc a {color: #FFFFFF !important;}
+	
+	.news-single-img {padding: 5px 0 10px;}
+	.news-single-img img {box-shadow: 0 0 8px #555555;margin: 10px 0;}
+	
+	#googleAdSense {text-align:center;padding-top:10px;}
+	
+	@media print
+  	{
+  		.header, .top_container, .bottom_container, .right_container, .footer, #topcontrol {display:none;}
+  		.left_container, .container, .global_container, .global {display:table;float:none;position:relative;}
+  	}
+	</style>
+	
+	<script src="../../../fileadmin/templates/v1/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function() {          
+			$("img").lazyload({
+				placeholder : "http://www.guidetypo3.com/fileadmin/templates/v1/images/grey.gif",
+				effect      : "fadeIn"
+			});
+			$(".partage").nudge({property:"top",direction:"",amount:-10,duration:166});
+		});
+	</script>
+	
+	<!-- Placez cette balise dans la section <head> ou juste avant la balise de fermeture </body> -->
+	<script type="text/javascript" src="../../../../apis.google.com/js/plusone.js">
+  		{lang: 'fr'}
+	</script>
+	
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../indexee9f.html" />
+	
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16108840-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script src="../../../typo3conf/ext/sp_socialbookmarks/res/js/socialbookmarks.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	/*<![CDATA[*/
+<!--
+	function openPic(url,winName,winParams)	{	//
+		var theWindow = window.open(url,winName,winParams);
+		if (theWindow)	{theWindow.focus();}
+	}
+
+// -->
+	/*]]>*/
+</script>
+
+</head>
+<body>
+
+
+  <div class="global">
+    <div class="header">
+      <a href="../../../en.html" title="Guide TYPO3" class="logo"><img title="Guide TYPO3" alt="Guide TYPO3" src="../../../fileadmin/templates/v1/images/logo.png" /></a>
+      <div class="share-rs">	<a target="_blank" href="../../../indexee9f.html" class="partage rss"></a>
+	<a target="_blank" href="http://www.facebook.com/Guide.Typo3" class="partage fb"></a>
+	<a target="_blank" href="http://twitter.com/guidetypo3" id="hovercard" title="@guidetypo3" class="partage tw"></a>
+	<a target="_blank" href="../../../index.html" class="partage bg"></a></div>
+    </div>
+    <div class="global_container">
+      <div class="top_container">
+        <ul class="top_menu"><li><a href="../../home.html" onfocus="blurLink(this);">Home</a></li><li><a href="../../extensions.html" onfocus="blurLink(this);">Extensions</a></li><li><a href="../../tips-and-tricks.html" onfocus="blurLink(this);">Tips and Tricks</a></li><li><a href="../../tutorials.html" onfocus="blurLink(this);">Tutorials</a></li><li><a href="../../typoscript.html" onfocus="blurLink(this);">Typoscript</a></li><li><a href="../../downloads.html" onfocus="blurLink(this);">Downloads</a></li><li><a href="../../contact.html" onfocus="blurLink(this);">Contact</a></li></ul>
+        <div class="search"><form action="http://www.guidetypo3.com/en/search.html" name="Recherche" method="post" style="float:right;">
+        	<p>
+        		<input type="text" name="tx_indexedsearch[sword]" class="text" />
+			<input type="hidden" name="tx_indexedsearch[pointer]" value="0" />
+			<input type="hidden" name="tx_indexedsearch[defOp]" value="1" />
+			<input type="hidden" name="tx_indexedsearch[ext]" value="1" />
+			<input type="hidden" name="tx_indexedsearch[results]" value="10" />
+			<input type="hidden" name="tx_indexedsearch[lang]" value="0" />
+			<input type="hidden" name="tx_indexedsearch[type]" id="tx-indexedsearch-selectbox-type" value="1" />
+        		<input type="submit" value="OK" class="submit" />
+        	</p>
+        </form></div>
+      </div>
+      <div class="container">
+        <div class="left_container"><h1>TYPO3 Newsletter</h1><!--TYPO3SEARCH_begin--><a id="c131"></a><div id="c39" class="csc-default">
+<div class="dragtoshare">
+<table border="0" cellspacing="0" cellpadding="1" width="100%" class="noStyle">
+  <tr>
+    <td valign="top">
+      <span class="auteur">Article written on 26/03/2011 by&nbsp; haythoum</span><br />
+      <img alt="" src="../../../clear.gif" width="1" height="5" /><br />
+      <div class="news-single-img"><a href="../../../index13d6.html?eID=tx_cms_showpic&amp;file=uploads%2Fpics%2Fnewsletter-typo3-01-2011.jpg&amp;md5=821a9cd5baf0bd0c248d77a18df9f38aebc4dd23&amp;parameters[0]=YTo0OntzOjU6IndpZHRoIjtzOjQ6IjgwMG0iO3M6NjoiaGVpZ2h0IjtzOjM6IjYw&amp;parameters[1]=MCI7czo3OiJib2R5VGFnIjtzOjQyOiI8Ym9keSBiZ0NvbG9yPSIjZmZmZmZmIiBz&amp;parameters[2]=dHlsZT0ibWFyZ2luOjA7Ij4iO3M6NDoid3JhcCI7czozNzoiPGEgaHJlZj0iamF2&amp;parameters[3]=YXNjcmlwdDpjbG9zZSgpOyI%2BIHwgPC9hPiI7fQ%3D%3D" onclick="openPic('../../../index13d6.html?eID=tx_cms_showpic&amp;file=uploads%2Fpics%2Fnewsletter-typo3-01-2011.jpg&amp;md5=821a9cd5baf0bd0c248d77a18df9f38aebc4dd23&amp;parameters[0]=YTo0OntzOjU6IndpZHRoIjtzOjQ6IjgwMG0iO3M6NjoiaGVpZ2h0IjtzOjM6IjYw&amp;parameters[1]=MCI7czo3OiJib2R5VGFnIjtzOjQyOiI8Ym9keSBiZ0NvbG9yPSIjZmZmZmZmIiBz&amp;parameters[2]=dHlsZT0ibWFyZ2luOjA7Ij4iO3M6NDoid3JhcCI7czozNzoiPGEgaHJlZj0iamF2&amp;parameters[3]=YXNjcmlwdDpjbG9zZSgpOyI%2BIHwgPC9hPiI7fQ%3D%3D','d28cbf941c83981dfe318ec9f87b9926','width=400,height=316,status=0,menubar=0'); return false;" target="thePicture"><img src="../../../uploads/pics/newsletter-typo3-01-2011.jpg" width="400" height="316" border="0" alt="Newsletter TYPO3" title="Newsletter TYPO3" /></a><p class="news-single-imgcaption" style="width:400px;"></p></div>
+      <p>I received yesterday for the first time a TYPO3 Newsletter 01-2011 from the TYPO3 Association. I was surprised to receive this newsletter with a rich visual content rather pretty. It is a good initiative from the TYPO3 Association.<br /><br /><br /><br />This newsletter is sent to all users typo3.org.</p>
+      
+      
+    </td>
+  </tr>
+</table>
+</div>
+<br />
+<a href="../../home.html">Return to Home</a>
+      
+</div><div id="c88" class="csc-default"><p class="bodytext"><br /><b>Vous avez aimé cet article ? Partagez-le !<br /><br /></b></p></div><div id="c87" class="csc-default"><div class="tx-spsocialbookmarks-pi1">
+		Social Bookmarks (sp_socialbookmarks): No bookmarks found.
+	</div>
+	</div><div id="c31" class="csc-default"><ul id="targets" style="display:none;">
+      <li id="twitter"><a href="http://twitter.com/"><!-- --></a></li>
+      <li id="delicious"><a href="http://delicious.com/"><!-- --></a></li>
+      <li id="facebook"><a href="http://www.facebook.com/"><!-- --></a></li>
+</ul></div><!--TYPO3SEARCH_end--></div>
+        <div class="right_container"><!--TYPO3SEARCH_begin--><a id="c115"></a><div id="c50" class="csc-default"><div align="center">
+<a title="Suggest an article" alt="Suggest an article" href="../../suggest-an-article.html" class="btnProposer">Suggest an article</a>
+</div></div><div id="c58" class="csc-default">
+<div id="googleAdSense">
+  	<script type="text/javascript">
+					<!--
+					google_ad_client	= "pub-7194859205088692";
+					google_ad_slot		= "9838972167";
+					google_ad_width		= 160;
+					google_ad_height	= 600
+					//-->
+				</script>
+				<script type="text/javascript" src="../../../../pagead2.googlesyndication.com/pagead/f.txt">
+				</script>
+</div>
+</div><!--TYPO3SEARCH_end--></div>
+      </div>
+      <div class="bottom_container"></div>
+    </div>
+    <div class="footer">
+      <div class="bottom_menu"><a href="../../our-contact.html" onfocus="blurLink(this);"  >Our contact</a>&nbsp;&#124;&nbsp;<a href="../../legal-mentions.html" onfocus="blurLink(this);"  >Legal mentions</a>&nbsp;&#124;&nbsp;<a href="../../site-map.html" onfocus="blurLink(this);"  >Site map</a><div style="margin-top:10px;"><a target="_blank" href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.guidetypo3.com"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" width="88" height="31" border="0" /></a>&nbsp;<a target="_blank" href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.guidetypo3.com"><img src="http://www.w3.org/Icons/valid-css" alt="Valid CSS" width="88" height="31" border="0" /></a></div></div>
+      <div class="logo_typo3">
+        <a href="http://www.planethoster.net/?a_aid=guidetyp&amp;a_bid=de9a8992" target="_blank"><img src="../../../../cdn.planethoster.net/images/bannieres/Fbutton-88x31-02.gif" border="0" alt="Hébergé par PlanetHoster" title="Hébergé par PlanetHoster" width="88" height="31" /></a><img style="border:0" src="http://affiliation.planethoster.info/scripts/imp.php?a_aid=guidetyp&amp;a_bid=de9a8992" width="1" height="1" alt="" />
+        <a href="http://typo3.org/" target="_blank"><img src="../../../fileadmin/templates/v1/images/logo_typo3.png" alt="Réalisé avec TYPO3" title="Réalisé avec TYPO3" /></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+<!-- Mirrored from www.guidetypo3.com/en/news/article/typo3-newsletter.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Nov 2019 12:50:43 GMT -->
+</html>

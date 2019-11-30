@@ -1,0 +1,14 @@
+#slider {margin: 6px 0 0 2px;padding:0;position: relative;}
+.scroll {overflow: auto;overflow-x:hidden;position: relative; height:400px; width:486px;/* fix for IE to respect overflow */ background: #FFFFFF;}
+.scrollContainer div.panel {padding: 0;height:400px; width:486px;}
+.scrollButtons {cursor:pointer;}
+ul.navigation {white-space: nowrap;margin:0;padding:0;list-style:none;}
+div#slider_nav {clear:both;float:left;overflow:hidden;position:relative;width:200px;background:url("vertical_div_middle.png") repeat-y scroll right 0 transparent;padding:10px 0;margin-right:4px;}
+ul.navigation li {margin: 0;padding: 0;}
+ul.navigation li.selected a {color:#FF8700;background:url("sidenav_on.png") no-repeat scroll 0 0 #FFFFFF;}
+ul.navigation a {font-size:0.95em;display:block;color:#334;text-align:right;padding:1px 10px 0 0;line-height:40px;height:44px;padding-top:1px;position:relative;text-transform: none;text-decoration:none;font-weight:bold;}
+ul.navigation a:hover {color:#FF8700;}
+ul.navigation #current a {background-color:#fff;border-bottom: 1px solid #fff;}
+.scrollButtons {position: absolute;top: 200px;cursor: pointer;}
+.scrollButtons.left {left: -25px;}
+.scrollButtons.right {right: -25px;}

@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.nticsoft.com	TRUE	/	FALSE	1999999999	90planBAK	R698931959
+www.nticsoft.com	TRUE	/	FALSE	1999999999	90plan	R1530973257
+

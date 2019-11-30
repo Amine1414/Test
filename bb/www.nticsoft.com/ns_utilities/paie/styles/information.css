@@ -1,0 +1,137 @@
+.fond
+{
+ background-color : #f2eccc;
+}
+
+.pub
+{
+	float: right;
+	width: 180px;
+	height: 500px;
+	background-image: url("../../../images/nticsoft_logo.jpg");
+	background-repeat: no-repeat;
+	border-left: 2px solid #de8a22;
+	padding-left: 5px;
+}
+
+.logo
+{
+   width: 180px;
+   height: 118px;
+   background-image: url("logo.html");
+   background-repeat: no-repeat;
+}
+
+h2
+{
+	text-align: center;
+	color: #de8a22;
+}
+
+.centrer
+{
+	text-align: center;
+}
+
+.centrer1
+{
+	text-align: center;
+	color: #de8a22;
+}
+
+.decal1
+{
+	margin-left:60px;
+	color: #de8a22;
+}
+
+.email
+{
+	text-align: center;
+}
+
+#onglets
+{
+        position : absolute;
+        border : 1px solid transparent;
+        padding : 0;
+        font : bold 11px Batang, arial, serif;
+        list-style-type : none;
+        left : 50%;
+        margin-top : 0;
+        width : 800px;
+		margin-left : -400px
+}
+
+#onglets li
+{
+    float : left;
+    height : 21px;
+    background-color: #F4F9FD;
+    margin : 1px 2px 0 2px;
+
+    border : 1px solid #9EA0A1;
+}
+
+#onglets li a
+{
+    display : block;
+    width : 100%;
+	height : 100%;
+	font-size : 1.4em;
+    color : #666;
+    text-decoration : none;
+    padding : 4px;
+}
+
+#onglets li.active
+{
+    border-bottom: 1px solid #f2eccc;
+    background-color: #f2eccc;
+}
+
+#onglets li:hover
+{
+    background-color : #f2eccc;
+}
+
+#menu
+{
+        border-bottom : 1px solid #9EA0A1;
+        padding-bottom : 25px;
+}
+
+li
+{
+	padding : 5px;
+}
+
+
+.jaune
+{
+ background-color : yellow;
+}
+.rouge
+{
+ color : #b25a3b;
+}
+.souligne
+{
+ text-decoration : underline ;
+}
+.gras
+{
+ font-weight : bold;
+}
+.petit
+{
+ font-size : 0.8em;
+}
+
+.fermer
+{
+	position:fixed;
+	top: 100%;
+	margin:-50px auto 0 auto;
+	margin-left:250px;
+}

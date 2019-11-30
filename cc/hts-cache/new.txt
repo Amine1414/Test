@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+12:18:45	208/208	---M--	404	error ('Not%20Found')	text/html	date:Fri,%2001%20Jun%202018%2011:18:14%20GMT	http://www.nticsoft.com/robots.txt		(from )
+12:18:45	0/0	---MCZ	200	added ('OK')	text/html	date:Fri,%2001%20Jun%202018%2011:18:15%20GMT	http://www.nticsoft.com/ns_utilities/paie/	C:/My%20Web%20Sites/cc/www.nticsoft.com/ns_utilities/paie/index.html	(from )
